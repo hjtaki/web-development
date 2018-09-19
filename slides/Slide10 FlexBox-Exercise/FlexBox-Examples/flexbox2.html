@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Order</title>
+	<style type="text/css">
+		.title {
+			font-size: 2.5em;
+			text-align: center;
+		}
+		.container {
+			width: 100%;
+			display: flex;
+			/*flex-wrap: wrap;*/
+		}
+		.box { 
+			width: 500px;
+			height: 500px; 
+		}
+		.dark_blue {
+			background-color: #0F1741;
+		}
+		.light_blue {
+			background-color: #1078C0;
+		}
+		.orange {
+			background-color: orange;
+		}
+		.red {
+			background-color: red;	
+		}
+		.green {
+			background-color: green;
+		}
+
+		
+
+		@media screen and (min-width: 700px) {
+			.dark_blue { order: 4; }
+			.light_blue { order: 5; }
+			.green { order: 2; }
+			.orange { order: 3; }
+			.red { order: 1; }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="title">
+		Flex Item: 
+		<code>order</code>
+	</div>
+	<div class="container">
+		<div class="box dark_blue"></div>
+		<div class="box light_blue"></div>
+		<div class="box green"></div>
+		<div class="box orange"></div>
+		<div class="box red"></div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

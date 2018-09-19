@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+      
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+
+        .title {
+          font-size: 2.5em;
+          text-align: center;
+        }
+
+        .box {
+          min-height: 150px;
+        }
+
+        .dark_blue {
+          background-color: #2A457A;
+          color: #efefef;
+        }
+
+        .light_blue {
+          background-color: #099DD9;
+        }
+
+        .green {
+          background-color: #0C8542;
+        }
+
+        .lime {
+          background-color: rgb(179, 210, 52);
+        }
+
+        .seafoam {
+          background-color: rgb(77, 190, 161);
+        }
+
+        .red {
+          background-color: #EC1D3B;
+        }
+
+        .orange {
+          background-color: #F79420;
+        }
+
+        html, body {
+          height: 100%;
+          width: 100%;
+        }
+        a#menu svg {
+          width: 40px;
+          fill: #000;
+        }
+        nav, main {
+          padding: 1em;
+          box-sizing: border-box;
+        }
+        main {
+          width: 100%;
+          height: 100%;
+        }
+      /* Your comment starts here */
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        /* 1. when the width is less than 600px, the drawer should be out of body. it work independently*/
+        position: absolute;
+        /* 2-1. 
+          - WebKit is a HTML/CSS web browser rendering engine for Safari/Chrome 
+          - the drawer is normally(less than width 600px) hidden*/
+        -webkit-transform: translate(-300px, 0);
+        /* 2-2. how to make an element change from one state to another.
+          -> translate,rotate, move, skew, and scale elements. */
+        transform: translate(-300px, 0);
+        /* 3. By applying a transition you can control the change, making it smooth and gradual. for transirion, duration and property is required */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 600px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          /* 4. when width size over 600px, the drawer should locate 0,0 */
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          /* 5. for rendering to Chrome, Safari, and firefox */
+          display: -webkit-flex;
+          /* 6 */
+          display: flex;
+          /* 7.for rendering to Chrome, Safari, and firefox */
+          -webkit-flex-flow: row nowrap;
+          /* 8. contents is arranged in rows, not wraped(go to next row) */
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* 9. the growth rate of content in main is the same.  */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        /* 10.put below content after #menu */
+        main > #menu:after {
+          content: 'The drawer stays open if width > 600px';
+        }
+        main p, nav p {
+          /* 11. when over 600px, both p tag have line-through effect */
+          text-decoration: line-through;
+        }
+      }
+
+    </style>
+</head>
+<body cz-shortcut-listen="true"> 
+  <!-- 12. the property of the drawer -->
+    <nav id="drawer" class="dark_blue">
+      <h2>Off Canvas</h2>
+      <p>Click outside the drawer to close</p>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+      <p>Click on the menu icon to open the drawer</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation">Go To JavaScript Event Propagation</a>
+    </main>
+
+
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = docu ment.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      /* Refer to this webpage: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation */
+      
+      /* 13.Click menu button -> open drawer 
+          - toggle : hide and show    
+    */
+      menu.addEventListener('click', function(e){
+        drawer.classList.toggle('open'); e.stopPropagation(); });
+     
+      /* 14. Click menu button -> remove drawer.
+      */
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');});
+
+    </script>
+  </body>
+  </html>

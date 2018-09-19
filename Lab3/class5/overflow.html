@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Overflow</title>
+        <meta charset="utf-8">
+        
+        <style>
+            div {
+                font-family: 'verdana';
+                width: 150px;
+                height: 150px;
+            }
+            
+            #visible {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+/*                overflow: visible;*/
+                background-color: darkgray;
+            }
+            
+            #hidden {
+                position: absolute;
+                top: 250px;
+                left: 20px;
+                overflow: hidden;
+                background-color: lightgreen;                
+            }
+            
+            #scroll {
+                position: absolute;
+                top: 10px;
+                left: 200px;
+                overflow: scroll;
+                background-color: skyblue;
+            }
+            
+            #auto {
+                position: absolute;
+                top: 250px;
+                left: 200px;
+                overflow: auto;
+                background-color: darkturquoise;
+            }
+            
+            #x-y {
+                position: absolute;
+                top: 10px;
+                left: 380px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                background-color: darkturquoise;
+            }            
+        </style>
+        
+    </head>
+
+    <body>
+        <div id="visible" title="Visible">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+                
+        <div id="hidden" title="Hidden">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+        
+        <div id="scroll" title="Scroll">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+        
+        <div id="auto" title="Auto">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+        
+        <div id="x-y" title="overflow-x and overflow-y">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+    </body>
+
+</html>

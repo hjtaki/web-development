@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Positioning: Absolute</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<style type="text/css">
+
+			/*
+			1 - declare kind of positioning
+				position:absolute;
+			2 - one or two coordinate
+				top:
+				bottom:
+				left:
+				right:
+				
+			*/
+#absolute_positioned{
+	border-style:dotted;
+	border-width:1px;
+	padding:5px;
+	width:310px;
+	background-color:lightgrey;
+    
+/* Uncomment to see the result  */
+/*
+	position:absolute;
+	bottom:100px;
+	right:200px;
+*/
+	
+}
+
+		</style>
+	</head>
+	<body>
+		
+		<h1 id="heading">CSS Positioning: Absolute</h1>
+	
+		<p id="absolute_positioned">Use this tag to demonstrate <code>position:absolute;</code></p>
+
+		<p >Absolute positioning places the box model according to the edges of the available space. The available space is determined by the first parent element with a position other than static. If no such element exists then the available space is determined by the containing &lt;html> tag.</p>
+		<p>When absolute positioning, at least two coordinates are usually described, an X axis (right or left) and a Y axis (top or bottom).
+		<ul>
+			<li>begin with the css rule <code>position:absolute</code></li>
+			<li>apply one or two coordinates (<code>top, bottom, left, right</code>) to describe how to shift the location of the box. eg: <code>top:40px; left:10px;</code></li>
+			<li>use only with block elements</li>
+			<li>often used with divs</li>
+			<li>applied using <b>id</b>s (unique on the page)</li>
+			<li>removes the element from 'content flow', eg: (it no longer affects other element positions)</li>
+			<li>will 'stick' to the corner of the first non-static ancestor it finds, or use the browser edge if no non-static ancestor exists.</li>
+			</li>once positioned, absolute elements will follow the page scroll</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+
+/* TV Show image */
+#house-of-cards {
+    background-image: url(../images/house-of-cards.jpg);
+    width: 300px;
+    height: 222px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+    
+    /* Box-shadow effect */
+    box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+    
+    /* Transition effect on hover */
+    transition: all 1s ease-in-out;
+}
+
+/* TV Show secondary image */
+#house-of-cards:hover {    
+    background-image: url(../images/frank-underwood.png);
+    width: 390px;
+    height: 390px;
+}
+
+/* Large image at the bottom with border-image effect */
+#air-force-one {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-style: solid;
+    border-width: 8px 8px;
+    
+    /* Vendor Prefix */
+    -moz-border-image: url(../images/house-of-cards-flag.png) 8 8 stretch;
+    -webkit-border-image: url(../images/house-of-cards-flag.png) 8 8 stretch;
+    
+    border-image: url(../images/house-of-cards-flag.png) 8 8 stretch;
+}
+
+/* Personalized Button */
+#css3-button {
+    background: transparent;
+    border: 1px solid #35B88F;
+    
+    /* Rounded corners */
+    border-radius: 8px;
+    
+    color: #35B88F;    
+    cursor: pointer;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 9px 14px;
+    text-transform: uppercase;
+    
+    /* Transition effect on hover */
+    transition: all 0.3s ease-in-out;
+}
+
+#css3-button:hover {
+    background: #35B88F;
+    color: #FFFFFF;
+}

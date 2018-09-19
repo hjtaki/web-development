@@ -1,0 +1,108 @@
+<!-- table row, table header 
+th, td {padding 5px 15px;} ( top, r, b, left)
+decimal - 
+binart(base2)
+hexadecimal(base16) 1 ~9 ,a ,b ~f
+FF=16x15 + 15
+	R  G  B
+Hex 00 0F FF
+
+15 = 1111 = 1
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi</title>
+	<meta charset = "UTF-8" />	
+	<style>
+	    table, td, th {
+	    	border :1px solid black;
+	
+
+
+
+	    } 
+
+    </style>
+
+
+</head>
+
+<body>
+
+	<table>
+			<h2>Part A:</h2>
+		<tr>
+			<td>cell 1</td>
+			<td>cell 2</td>
+			<td>cell 3</td>
+		</tr>
+
+		<tr>
+			<td>cell 4</td>
+			<td>cell 5</td>
+			<td>cell 6</td>
+		</tr>
+
+		<tr>
+			<td>cell 7</td>
+			<td>cell 8</td>
+			<td>cell 9</td>
+		</tr>
+
+
+	</table>	
+
+	<br>
+
+	<table class="table">
+			<h2>Part B:</h2>
+		<tr>
+			<td colspan="3">cell 1</td>
+		</tr>
+
+		<tr>
+			<td rowspan="2">cell 2</td>
+			<td>cell 3</td>
+			<td>cell 4</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">cell 7</td>
+		
+		
+		</tr>
+
+
+	</table>	
+
+	<br>
+
+	<table>
+		<h2>Part C:</h2>
+		
+			<tr>
+				<td rowspan="3">cell 1</td>
+				<td colspan="2">cell 2</td>
+				<td rowspan="4">cell 3</td>
+			</tr>
+
+			<tr>
+				<td>cell 4</td>
+				<td>cell 5</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">cell 6</td>
+			</tr>
+
+			<tr>
+				<td colspan="3">cell 7</td>
+			</tr>
+
+
+	</table>
+
+</body>
+</html>

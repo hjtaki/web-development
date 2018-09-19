@@ -1,0 +1,44 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    text-decoration: none;
+}
+
+.sprite {
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sprite images */
+#facebook {
+    height: 84px;
+    width: 84px;    
+    background: url(mini-social-icons.png) 0px 184px; /* 184 = 168 + 8 (padding) + 8 (padding) */    
+}
+
+#google {
+    height: 84px;
+    width: 84px;
+    background: url(mini-social-icons.png) -252px 184px; /* 184 = 168 + 8 (padding) + 8 (padding) */    
+}
+
+#linkedin {
+    height: 84px;
+    width: 84px;
+    background: url(mini-social-icons.png) -336px 184px; /* 184 = 168 + 8 (padding) + 8 (padding) */    
+}
+
+#twitter {
+    height: 84px;
+    width: 84px;
+    background: url(mini-social-icons.png) -672px 184px; /* 184 = 168 + 8 (padding) + 8 (padding) */    
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Positioning: Combining Absolute and Relative</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<style type="text/css">
+code{
+	font-weight:bold;
+	font-size:1.3em;
+	color:darkslateblue;
+
+}
+
+/* BOX A */
+#absolute_pos{
+
+	border-style:dotted;
+	border-width:1px;
+	padding:5px;
+	width:360px;
+	background-color:#FFCCCB;
+    
+/* Uncomment to see the result  */
+    
+/*
+	position:absolute;
+	bottom:50px;
+	
+	right:100px;
+*/
+	
+}
+
+/* BOX B */
+.relative_pos{
+	border-style:dotted;
+	border-width:1px;
+	padding:5px;
+	background-color:#FFD197;
+    
+/* Uncomment to see the result  */
+    
+/*	position:relative; */
+	
+}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Positioning: Combining Absolute and Relative</h1>
+		<div class="relative_pos">
+			<h3>Box B</h3>
+			<p>There are countless ways to combine both relative and absolute positioning. Here's one useful technique: Since absolute positioned elements are placed based on the edges of the space made available by the first non-static ancestor, if absolute positioned box <b>A</b> is contained in a relative (non-static) positioned box <b>B</b>, then <b>A</b> is absolute positioned based on <b>B</b>s edges.</p>
+			<p>If an absolute positioned tag has no non-static ancestor, it will use the edges of the browser view port as the boundary for determining which corner to 'stick' to.</p>
+			<ul>
+				<li>assign <code>position:relative;</code> to the parent container</li>
+				<li>assign <code>position:absolute;</code> to the child element</li>
+				<li>apply to the child one or two coordinates (<code>top, bottom, left, right</code>) to describe which corner of the parent to 'stick' to. eg: <code>top:40px; left:10px;</code></li>
+			</ul>
+			<p id="absolute_pos"><strong>Box A</strong>: Make this pink <code>p</code> tag <code>position:absolute;</code>. Note: The corner it positions to will depend on the first non-static parent or ancestor</p>
+			
+		</div>
+	</body>
+</html>

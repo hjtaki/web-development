@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Exercise</title>
+	<style type="text/css">
+		.title {
+			font-size: 2.5em;
+			text-align: center;
+		}
+		.container {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box { 
+			width: 400px;
+			height: 100px; 
+		}
+		.light_green {
+			background-color: #A0BC17;
+		}
+		.dark_blue {
+			background-color: #0F1741;
+		}
+		.light_blue {
+			background-color: #1078C0;
+		}
+		.orange {
+			background-color: orange;
+		}
+		.red {
+			background-color: red;	
+		}
+		.green {
+			background-color: green;
+		}
+		.mid_green {
+			background-color: #29A37B;
+		}
+
+		
+
+		@media screen and (min-width: 600px) {
+			.light_green {
+				width: 100%;
+				order: 1;
+			}
+			.red {
+				width: 50%;
+				order: 2;
+			}
+			.orange {
+				width: 50%;
+				order: 3;
+			}
+			.mid_green {
+				width: 100%;
+				order: 4;
+			}
+			.light_blue {
+				width: 20%;
+				order: 5;
+			}
+			.dark_blue {
+				width: 60%;
+				order: 6;
+			}
+			.green {
+				width: 20%;
+				order: 7;	
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="title">
+		<code>Flexbox Exercise </code>
+	</div>
+	<div class="container">
+		<div class="box light_green"></div>
+		<div class="box dark_blue"></div>
+		<div class="box light_blue"></div>
+		<div class="box green"></div>
+		<div class="box orange"></div>
+		<div class="box red"></div>
+		<div class="box mid_green"></div>
+	</div>
+</body>
+</html>

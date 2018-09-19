@@ -1,0 +1,76 @@
+form {
+    margin-top: 30px;
+    width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;    
+}
+
+input, textarea {
+    display: block;
+    border: 1px solid;
+    border-color: lightblue;
+    border-radius: 4px;
+    
+    width: 500px;
+    
+    /* Font style */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    color: #143B75;
+    padding: 0.9em; /* Align de text */    
+}
+
+input {
+    height: 20px;    
+}
+
+input:focus {
+    background-color: lightblue;    
+}
+
+textarea {
+    width: 500px;
+    height: 100px;
+}
+
+textarea:focus {
+    background-color: lightblue;
+}
+
+.radio, .checkbox {
+    width: auto;
+    display: inline-block;
+}
+
+.select {
+    width: auto;
+    display: inline-block; 
+    border: 1px solid;
+    border-color: lightblue;
+    border-radius: 4px;    
+    
+    /* Font style */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;    
+    padding: 0.9em; /* Align de text */        
+}
+
+.submit-button, .reset-button {
+    border: 1px solid;
+    border-color: #0B7D40;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    color: #0B7D40;
+    
+    padding: 0.6em 0.9em;
+}

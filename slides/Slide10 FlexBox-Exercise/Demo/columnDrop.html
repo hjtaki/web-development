@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Column Drop</title>
+	<style type="text/css">
+		.title {
+			font-size: 2.5em;
+			text-align: center;
+		}
+		.container {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box { 
+			width: 100%;
+			height: 150px; 
+		}
+		.dark_blue {
+			background-color: #0F1741;
+		}
+		.light_blue {
+			background-color: #1078C0;
+		}
+		.green {
+			background-color: green;
+		}
+
+		@media screen and (min-width: 450px) {
+			.dark_blue {
+				width: 25%;
+			}
+			.light_blue {
+				width: 75%;
+			}
+		}
+		@media screen and (min-width: 550px) {
+			.dark_blue, .green {
+				width: 25%;
+			}
+			.light_blue {
+				width: 50%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="title">
+		<code>Column Drop Pattern</code>
+	</div>
+	<div class="container">
+		<div class="box dark_blue"></div>
+		<div class="box light_blue"></div>
+		<div class="box green"></div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
